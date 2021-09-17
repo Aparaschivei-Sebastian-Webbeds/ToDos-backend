@@ -36,7 +36,7 @@ namespace project3.Controllers
 
         // POST api/<UsersController>
         [HttpPost("register")]
-        public IActionResult Post([FromBody] RegisterDto dto)
+        public IActionResult Register([FromBody] RegisterDto dto)
         {
             var user = new User {
                 Id = Guid.NewGuid(),
@@ -49,7 +49,11 @@ namespace project3.Controllers
             return Created("User account created", user);
             
         }
+        //[HttpPost("login")]
+        //public IActionResult Login([FromBody] LoginDto dto)
+        //{
 
+       // }
         // PUT api/<UsersController>/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
